@@ -1,0 +1,11 @@
+{
+    "pages":[
+        "pages/index/index"
+    ],
+    "window":{
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "不锈钢开平计算器",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    }
+}
