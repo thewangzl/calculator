@@ -7,10 +7,44 @@
   background-color: #FFFFFF;
 }
 button{
-  margin-top: 30rpx;
+  margin-top: 0rpx;
   margin-bottom: 30rpx;
 }
 .button-sp-area{
   margin: 0 auto;
   width: 60%;
+}
+.btn-area{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+}
+
+.reset-btn {
+  width: 33%;
+  font-size: 15px;  
+}
+
+.submit-btn {
+  width : 67%;
+  font-size: 15px;
+}
+
+.share-btn{
+  width : 30px;
+  height : 30px;
+}
+
+.flex-wrp{
+  display:flex;
+}
+.flex-item{
+  width: 50%;
+}
+
+.message {
+  padding-left:15px;
+  padding-right:15px;
+  font-size:18px;
+
 }

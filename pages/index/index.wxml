@@ -5,46 +5,89 @@
     <form bindsubmit="formSubmit" bindreset="formReset">
       <view class="page-section">
         <view class="weui-cells__title">不锈钢型号</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__hd">
-              <view class="weui-label">当前选择</view>
-            </view>
-            <view class="weui-cell__bd">
-              <picker bindchange="thicknessChange" value="{{thicknessIndex}}" range="{{ thickness}}">
-                <view class="weui-input">{{thickness[thicknessIndex]}}</view>
-              </picker>
-            </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+              <input id="thickness" placeholder="厚度(毫米)" value="{{metaData.thickness}}"  bindblur="metaDataChange"  type="digit" class="weui-input" />
+          </view>
+          <view class="flex-item weui-cell weui-cell_input">
+            <input id="weight" placeholder="重量(千克)" value="{{metaData.weight}}"  bindblur="metaDataChange" type="digit" class="weui-input" />
           </view>
         </view>
       </view>
       <view class="page-section">
-        <view class="weui-cells__title">重量(吨)</view>
-        <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cells__title">剪板</view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_1" placeholder="长度(毫米)" value="{{cutData.length_1}}" bindblur="cutDataChange"  type="number" class="weui-input" />
+          </view>
           <view class="weui-cell weui-cell_input">
-            <input name="weight" value="1" type="digit" class="weui-input" />
+            <input id="quantity_1" placeholder="数量" value="{{cutData.quantity_1}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_2" placeholder="长度(毫米)" value="{{cutData.length_2}}"  bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <input id="quantity_2" placeholder="数量" value="{{cutData.quantity_2}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_3" placeholder="长度(毫米)" value="{{cutData.length_3}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <input id="quantity_3" placeholder="数量" value="{{cutData.quantity_3}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_4" placeholder="长度(毫米)" value="{{cutData.length_4}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <input id="quantity_4" placeholder="数量" value="{{cutData.quantity_4}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_5" placeholder="长度(毫米)" value="{{cutData.length_5}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <input id="quantity_5" placeholder="数量" value="{{cutData.quantity_5}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_6" placeholder="长度(毫米)" value="{{cutData.length_6}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <input id="quantity_6" placeholder="数量" value="{{cutData.quantity_6}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_7" placeholder="长度(毫米)" value="{{cutData.length_7}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <input id="quantity_7" placeholder="数量" value="{{cutData.quantity_7}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title flex-wrp" style="flex-direction:row;">
+          <view class="weui-cell weui-cell_input flex-item">
+            <input id="length_8" placeholder="长度(毫米)" value="{{cutData.length_8}}" bindblur="cutDataChange" type="number" class="weui-input" />
+          </view>
+          <view class="weui-cell weui-cell_input">
+            <input id="quantity_8" placeholder="数量" value="{{cutData.quantity_8}}" bindblur="cutDataChange" type="number" class="weui-input" />
           </view>
         </view>
       </view>
-      <view class="page-section">
-        <view class="weui-cells__title">剪板长度(米)</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__hd">
-              <view class="weui-label">当前选择</view>
-            </view>
-            <view class="weui-cell__bd">
-              <picker bindchange="lengthChange" value="{{lengthIndex}}" range="{{length}}">
-                <view class="weui-input">{{length[lengthIndex]}}</view>
-              </picker>
-            </view>
-          </view>
-        </view>
+      <view class="btn-area flex-wrp" style="flex-direction:row">
+        <button class="reset-btn" type="" form-type="reset">清除</button>
+        <button class="submit-btn" type="primary" form-type="submit">计算</button>
       </view>
-      
-      <view class="btn-area">
-        <button type="primary" form-type="submit">计算</button>
-        <view>{{result}}</view>
+      <view class="flex-wrp">
+        <view class="message">{{result}}</view>
+       <!-- <button class="share-btn"  open-type="share">转发</button> -->
       </view>
     </form>
   </view>
