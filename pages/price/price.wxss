@@ -1,0 +1,25 @@
+@import "../common/index.wxss";
+@import "../common/lib/weui.wxss";
+
+view{
+  margin-top: 0.75rpx;
+  margin-bottom: 0.75rpx;
+  border: 0.1rpx solid;
+}
+
+.scroll-view-H {
+  margin-top:0px;
+  height: 30px;
+}
+.scroll-view-H-item {
+  width:60px;
+  display:inline-block;
+  border:0.5px solid silver;
+}
+.scroll-view-H-active {
+  background-color: blue;
+}
+
+.label{
+  width: 30%;
+}

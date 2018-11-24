@@ -1,11 +1,25 @@
 {
     "pages":[
-        "pages/index/index"
-    ],
+        "pages/index/index",
+        "pages/price/price"
+      ],
     "window":{
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "不锈钢开平计算器",
         "navigationBarBackgroundColor": "#F8F8F8",
         "backgroundColor": "#F8F8F8"
+    },
+    "tabBar":{
+      "list":[{
+          "text": "开平",
+          "pagePath": "pages/index/index",
+          "selectedIconPath": "images/cut_act.png",
+          "icon":"images/cut.png"
+        },{
+          "text": "报价",
+          "pagePath": "pages/price/price",
+          "selectedIconPath": "images/price_act.png",
+          "icon": "images/price.png"
+        }]
     }
 }

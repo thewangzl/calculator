@@ -35,13 +35,6 @@ button{
   height : 30px;
 }
 
-.flex-wrp{
-  display:flex;
-}
-.flex-item{
-  width: 50%;
-}
-
 .message {
   padding-left:15px;
   padding-right:15px;
