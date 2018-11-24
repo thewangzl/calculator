@@ -1,16 +1,27 @@
 @import "../common/index.wxss";
 @import "../common/lib/weui.wxss";
 
-
-.scroll-view-H {
-  margin-top:3px;
-  height: 30px;
+.group {
+  margin-bottom: 10px;
 }
+
+input{
+  border: 0.3px solid silver;
+}
+
+
 .scroll-view-H-item {
-  width:60px;
+  min-width:123rpx;
   display:inline-block;
-  height: 25px;
-  border:0.5px solid silver;
+  height: 70rpx;
+  border:1rpx solid silver;
+}
+.scroll-view-H-item view{
+  height: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
 }
 .scroll-view-H-active {
   background-color: blue;
@@ -18,4 +29,20 @@
 
 .label{
   width: 30%;
+}
+
+.sperate-line{
+    height: 2rpx;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.result{
+  margin-top: 30rpx;
+  font-size: 40rpx;
+}
+
+.price-copy {
+  margin-top:0rpx;
+  font-size:3prpx;
 }

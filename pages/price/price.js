@@ -7,30 +7,31 @@ Page({
     lengthArr:[100,110,120,130,140,150,160,170,180],
     thicknessArr: [0.2, 0.3,0.4, 0.5,0.6],
     typeArr: [{
-      name: "q",
+      name: "玫瑰金",
       price: 10
     }, {
-        name: "w",
+        name: "酒红",
         price: 20
       }, {
-        name: "e",
+        name: "小金鱼",
         price: 10
       }, {
-        name: "r",
+        name: "红木",
         price: 10
       }, {
-        name: "t",
+        name: "……",
         price: 10
       }, {
-        name: "y",
+        name: "……",
         price: 10
       }],
       input:{
         basePrice: 0,
         length: 0,
         thickness: 0,
-        typePrice: 0,
+        typePrice: 0
       },
+    type: "",
       price: 0
   },
 
@@ -41,7 +42,6 @@ Page({
     this.setData({
       input: _input
     });
-    console.log(this.data.input);
     this.calculatePrice();
   },
 
@@ -52,7 +52,11 @@ Page({
     this.setData({
       input: _input
     });
-    console.log(this.data.input);
+    if(key == "typePrice"){
+      this.setData({
+        type: e.target.dataset.name + ":" + e.target.dataset.value
+      });
+    }
     this.calculatePrice();
   },
   
@@ -61,6 +65,14 @@ Page({
     var p = _input.basePrice + _input.length + _input.thickness + _input.typePrice;
     this.setData({
       price : p
+    })
+  },
+
+  copyPrice: function(){
+    wx.showToast({
+      title: this.data.price + "",
+      icon: "none",
+      mask: true
     })
   },
 

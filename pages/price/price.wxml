@@ -1,34 +1,47 @@
-<view class="container">
-  <view class="flex-wrp">
-    <view class='weui-cells__title'>白板价格</view>
-    <view class="weui-cell weui-cell_input flex-item"><input id="basePrice" placeholder="" value="{{input.basePrice}}" bindinput="inputChange" type="digit" class="weui-input" /></view>
+<view class="container" style="justify-content: flex-start;">
+  <view class="group">
+    <view class="flex-wrp">
+      <view class='weui-cells__title'>白板价格</view>
+      <view class="weui-cell weui-cell_input flex-item" style='position:static;'>
+        <input id="basePrice" placeholder="" value="{{input.basePrice}}" bindinput="inputChange" type="digit" class="weui-input" />
+      </view>
+    </view>
   </view>
+  <view class='sperate-line'></view>
   <view class="group">
     <view class="flex-wrp">
       <view class="weui-cells__title">长度</view>
-      <view class="weui-cell weui-cell_input flex-item"><input id="length" placeholder="" value="{{input.length}}" bindinput="inputChange" type="digit" class="weui-input" /></view>
+      <view class="weui-cell weui-cell_input flex-item" style='position:static;'>
+        <input id="length" placeholder="" value="{{input.length}}" bindinput="inputChange" type="digit" class="weui-input" />
+      </view>
     </view>
-    <scroll-view class="scroll-view-H" scroll-x style=" display:flex; width:100%;white-space:nowrap" scroll-into-view="{{CurrHtoView}}">
-      <view wx:for="{{lengthArr}}" wx:for-item="v" bindtap="detailSelect" data-value="{{v}}" data-key="length" class="scroll-view-H-item">{{v}}</view>
-    </scroll-view>
+      <view wx:for="{{lengthArr}}" wx:for-item="v" class="scroll-view-H-item">
+        <view bindtap="detailSelect" data-value="{{v}}" data-key="length">{{v}}</view>
+      </view>
   </view>
   <view class="group">
     <view class="flex-wrp">
       <view class="weui-cells__title">厚度</view>
-      <view class="weui-cell weui-cell_input flex-item"><input id="thickness" placeholder="" value="{{input.thickness}}" bindinput="inputChange" type="digit" class="weui-input" /></view>
+      <view class="weui-cell weui-cell_input flex-item" style='position:static;'>
+        <input id="thickness" placeholder="" value="{{input.thickness}}" bindinput="inputChange" type="digit" class="weui-input" />
+      </view>
     </view>
-    <scroll-view class="scroll-view-H" scroll-x style=" display:flex; width:100%;white-space:nowrap" scroll-into-view="{{CurrHtoView}}">
-      <view wx:for="{{thicknessArr}}" wx:for-item="v" bindtap="detailSelect" data-value="{{v}}" data-key="thickness" class="scroll-view-H-item">{{v}}</view>
-    </scroll-view>
+      <view wx:for="{{thicknessArr}}" wx:for-item="v" class="scroll-view-H-item">
+        <view bindtap="detailSelect" data-value="{{v}}" data-key="thickness">{{v}}</view>
+      </view>
   </view>
   <view class="group">
     <view class="flex-wrp">
       <view class="weui-cells__title">类型</view>
-      <view class="weui-cell weui-cell_input flex-item"><input id="typePrice" placeholder="" value="{{input.typePrice}}" bindinput="inputChange" type="digit" class="weui-input" /></view>
+      <view class="weui-cells__title flex-item">{{type}}</view>
     </view>
-    <scroll-view class="scroll-view-H" scroll-x style=" display:flex; width:100%;white-space:nowrap" scroll-into-view="{{CurrHtoView}}">
-      <view wx:for="{{typeArr}}" data-value="{{item.price}}" data-key="typePrice" bindtap="detailSelect" class="scroll-view-H-item">{{item.name}}</view>
-    </scroll-view>
+      <view wx:for="{{typeArr}}" class="scroll-view-H-item">
+        <view data-value="{{item.price}}" data-name="{{item.name}}" data-key="typePrice" bindtap="detailSelect">{{item.name}}</view>
+      </view>
   </view>
-  <view>报价:{{price}}</view>
+  <view class='flex-wrp result'>
+  <view>报价:</view>
+  <view>{{price}}</view>
+  <button class='price-copy' bindtap="copyPrice">复制报价</button>
+  </view>
 </view>
