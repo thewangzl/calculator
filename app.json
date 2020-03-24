@@ -14,12 +14,12 @@
           "text": "开平",
           "pagePath": "pages/index/index",
           "selectedIconPath": "images/cut_act.png",
-          "icon":"images/cut.png"
+          "iconPath":"images/cut.png"
         },{
           "text": "报价",
           "pagePath": "pages/price/price",
           "selectedIconPath": "images/price_act.png",
-          "icon": "images/price.png"
+          "iconPath": "images/price.png"
         }]
     }
 }
