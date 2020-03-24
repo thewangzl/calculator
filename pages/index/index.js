@@ -77,7 +77,12 @@ Page({
   formSubmit:function(e){
     var metaData = this.data.metaData;
     var cutData = this.data.cutData;
-    if (metaData.thickness == '' || metaData.weight == '') {
+    if (metaData.thickness == '') {
+      wx.showToast({
+        title: '请填写厚度',
+        icon:'none',
+        duration:1000
+      })
       return;
     }
     var result = util.calculate(metaData, cutData);
